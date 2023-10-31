@@ -1,4 +1,18 @@
 {
     "extends": ["eslint:recommended", "next/core-web-vitals"],
-    "indent": ["error", 4]
+    "rules": {
+      "indent": ["error", 4],
+      "quotes": [
+        "error",
+        "single",
+        {
+            "avoidEscape": true
+        }
+    ],
+    "semi": [
+        "error",
+        "never"
+    ],
+    "eqeqeq": ["error","always"]
+    }
 }
