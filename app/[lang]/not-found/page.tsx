@@ -2,7 +2,7 @@ import { getDictionary } from '@/get-dictionary'
 import { Locale } from '@/i18n-config'
 import Image from 'next/image'
 import notFoundCss from '@/styles/not-found.module.css'
-import svg404 from '@/public/svg/img/404.svg'
+import { svg404 } from '@/public'
 
 export default async function NotFound({
     params: { lang },
