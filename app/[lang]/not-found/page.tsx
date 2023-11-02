@@ -1,4 +1,4 @@
-import { getDictionary } from '../../../get-dictionary'
+import { getDictionary } from '@/get-dictionary'
 import { Locale } from '@/i18n-config'
 import Image from 'next/image'
 import notFoundCss from '@/styles/not-found.module.css'
