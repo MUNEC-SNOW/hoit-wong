@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import Negotiator from 'negotiator'
 import { i18n } from '@/i18n-config'
 import { match as matchLocale } from '@formatjs/intl-localematcher'
-import Negotiator from 'negotiator'
 import { SKIP_URLS, URLS } from '@/helpers'
 
 function getLocale(request: NextRequest): string | undefined {
