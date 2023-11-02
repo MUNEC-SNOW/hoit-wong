@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server'
 import Negotiator from 'negotiator'
 import { i18n } from '@/i18n-config'
 import { match as matchLocale } from '@formatjs/intl-localematcher'
-import { SKIP_URLS, URLS } from '@/helpers'
+import { SKIP_URL_REGEX, matchUrl } from '@/helpers'
 
 function getLocale(request: NextRequest): string | undefined {
     const negotiatorHeaders: Record<string, string> = {}
@@ -36,21 +36,11 @@ export function middleware(request: NextRequest) {
         (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
     )
 
-    let originLocale = ''
-
-    if(!pathnameIsMissingLocale) {
-        originLocale = pathname.split('/')[1]
-    }
-
-    if(!SKIP_URLS.includes(pathname) && !pathname.includes('not-found')) {
-        const locale = getLocale(request)
-        const nextUrl = URLS.includes(pathname) 
-            ? `/${pathnameIsMissingLocale ? locale : ''}${pathname.startsWith('/') ? '' : '/'}${pathname}`
-            : `/${pathnameIsMissingLocale ? locale : originLocale}/not-found`
-
+    const locale = getLocale(request)
+    if(!SKIP_URL_REGEX.test(pathname)) {    
         return NextResponse.redirect(
             new URL(
-                nextUrl,
+                matchUrl(pathname, locale!, pathnameIsMissingLocale),
                 request.url
             )
         )
