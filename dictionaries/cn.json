@@ -1,0 +1,16 @@
+{
+    "server-component": {
+        "welcome": "Vítejte"
+    },
+    "counter": {
+        "increment": "Přidat",
+        "decrement": "Ubrat"
+    },
+    "notFound" : {
+        "title" : "404 找不到页面",
+        "subTitle" : "您要到访的页面不存在，或出现了其他错误。",
+        "text1" : "返回，或",
+        "text2" : "前往 FreightAmigo",
+        "text3" : "重新搜寻"
+    }
+}

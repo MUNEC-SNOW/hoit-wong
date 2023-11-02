@@ -1,0 +1,16 @@
+{
+  "server-component": {
+    "welcome": "Welcome"
+  },
+  "counter": {
+    "increment": "Increment",
+    "decrement": "Decrement"
+  },
+  "notFound" : {
+    "title" : "404 page not found",
+    "subTitle" : "The page you are looking for doesn’t exist or an other error occurred.",
+    "text1" : "Go back, or head over",
+    "text2" : "FreightAmigo to",
+    "text3" : "choose a new direction"
+  }
+}

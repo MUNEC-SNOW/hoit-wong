@@ -1,0 +1,25 @@
+.errorPage{
+	text-align: center;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	
+}
+
+.errorPageTitle{
+    margin: 25px 0;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.005em;
+    color: #0C2B60;
+}
+.errorPageSubTitle{
+    line-height: 25px;
+}
+
+.errorPageSubTitle > p {
+    font-size: 16px;
+    letter-spacing: 0.005em;
+    color: #5C5C5C;
+}
