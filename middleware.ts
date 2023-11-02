@@ -19,6 +19,11 @@ function getLocale(request: NextRequest): string | undefined {
     return matchLocale(languages, locales, i18n.defaultLocale)
 }
 
+/**
+ * @description handle each time url calling
+ * @param request 
+ * @returns {NextResponse | undefined} undefined for go on route, NextResponse() for new url
+ */
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname
 
