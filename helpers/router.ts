@@ -14,7 +14,7 @@ export const SKIP_URLS: ReadonlyArray<string> = [
 
 export const LOCALES: ReadonlyArray<string> = ['/en', '/cn', '/de']
 
-export const SKIP_URL_REGEX = /^(\/(en|cn|de))(\/(not-found|profile|home))?/g
+export const SKIP_URL_REGEX = /^(\/(en|cn|de))(\/(not-found|profile|home))?$/g
 
 /**
  * @description get new url to redirect
