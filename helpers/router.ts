@@ -3,15 +3,6 @@ export const URLS: ReadonlyArray<string> = [
     '/profile'
 ]
 
-export const SKIP_URLS: ReadonlyArray<string> = [
-    '/en',
-    '/cn',
-    '/de',
-    '/en/not-found',
-    '/cn/not-found',
-    '/de/not-found',
-]
-
 export const LOCALES: ReadonlyArray<string> = ['/en', '/cn', '/de']
 
 export const SKIP_URL_REGEX = /^(\/(en|cn|de))(\/(not-found|profile|home))?$/g
