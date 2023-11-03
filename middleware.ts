@@ -24,7 +24,7 @@ function getLocale(request: NextRequest): string | undefined {
  * @param request 
  * @returns {NextResponse | undefined} undefined for go on route, NextResponse() for new url
  */
-export function middleware(request: NextRequest) {
+export function middleware(request: NextRequest): NextResponse | undefined {
     const pathname = request.nextUrl.pathname
 
     /** @description skip files in folder public */
